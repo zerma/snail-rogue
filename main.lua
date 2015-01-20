@@ -1,3 +1,13 @@
-function love.draw()
-    love.graphics.print("Snail Rogue", 400, 300)
+debug = true
+
+function love.load(arg)
+
+end
+
+function love.update(dt)
+
+end
+
+function love.draw(dt)
+
 end

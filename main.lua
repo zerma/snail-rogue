@@ -1,10 +1,15 @@
 -- These are the initialization of the global variables
 debug = true
 canSalt = true
+-- Timers for saltballs and enemies
+createEnemyTimerMax = .4
+createEnemyTimer = createEnemyTimerMax
 saltTimerMax = .2
 saltTimer = saltTimerMax
 saltImg = nil
+enemyImg = nil
 saltBalls = {}
+enemies = {}
 -- A window table to store the properties of the game window itself
 window = {width = love.graphics.getWidth(), height = love.graphics.getHeight()}
 -- Our mollusc saviour, our lord, Snail Landa
@@ -15,6 +20,7 @@ move = {up= 'assets/w-top.png', down= 'assets/w-down.png', left = 'assets/w-left
 -- This is the first function to run, this is where we load our assets
 function love.load(arg)
   saltImg = love.graphics.newImage('assets/salt.png')
+  enemyImg = love.graphics.newImage('assets/enemy.png')
   snailLanda.img = love.graphics.newImage(move.left)
   snailLanda.width = snailLanda.img:getWidth()
   snailLanda.height = snailLanda.img:getHeight()
